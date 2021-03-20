@@ -185,15 +185,15 @@ void setup()
   pinMode(TESLOREAN_CAN_INT, INPUT);
 
   // Startup CAN Battery bus
-  can0.begin(CAN_1000KBPS);
+  can0.begin(CAN_500KBPS);
   #ifdef debug_setup
-    Serial.println("Battery CANbus initialized (1000 kbps)");
+    Serial.println("Battery CANbus initialized (500 kbps)");
   #endif
 
   // Startup CAN  TesLorean bus
-  can1.begin(CAN_500KBPS);
+  can1.begin(CAN_1000KBPS);
   #ifdef debug_setup
-    Serial.println("TesLorean CANbus initialized (500 kbps)");
+    Serial.println("TesLorean CANbus initialized (1000 kbps)");
   #endif
 
   // Connect the interrupt to the CAN frame trigger
